@@ -2,17 +2,17 @@
 This is the PHAS0077 code repository of Shao Juexi.
 
 Please create a new environment and install the following packages:
-mdtraj
-, numpy
+numpy
 , scipy
 , pandas
 , seaborn
 , tensorflow (2.6 and GPU perfered)
-, scikit-lear
+, scikit-learn
 , matplotlib
 , jupyter notebook / jupyterlab
 , lime
-,pytest.
+, pytest
+, MLTSA.
 Or you can use `pip install -r requirements.txt` to install all the packages.
 
 **Because the plot programs have fixed relative path both in 1D and 2D, after generating the new data both in 1D and 2D, you need to remove the past data and put the new data into the corresponding folder.**
@@ -26,7 +26,7 @@ You could use the current data to plot the results. Run with:
 `python .\OneD_plot.py`
 
 ## data generating and training
-In the OneD_script file, you can choose to using the current data, and train the model. Make sure you put the data.list and sim_arguments.list in the  PHAS0077_code_repo folder. Or you could generate new 1D data and run 1D Machine learning program. The instruction of choice was commented in the code.
+In the OneD_script file, you can choose to using the current data, and train the model. Make sure you put the 1D_data.list and sim_arguments.list in the  PHAS0077_code_repo folder. Or you could generate new 1D data and run 1D Machine learning program. The instruction of choice was commented in the code.
 Then you can run with
 
 `python .\OneD_script.py`
@@ -47,7 +47,7 @@ There are some lime instances in the 2D_LSTM folder, if you want to see the LIME
 
 Or you can change the lime_plot file to interpret a new instance, the instructions of changing was commented in the file. The Lime program is only for LSTM currently.
 ## data generating and training
-In the TwoD_script file, you can choose to using the current data, and train the model. Make sure you put the 1D_data.list and sim_arguments.list in the  PHAS0077_code_repo folder. Or you could generate new 2D data and run 2D Machine learning program. The instruction of choice was commented in the code.
+In the TwoD_script file, you can choose to using the current data, and train the model. Make sure you put the data.list in the  PHAS0077_code_repo folder. Or you could generate new 2D data and run 2D Machine learning program. The instruction of choice was commented in the code.
 Then you can run with
 
 `python .\TwoD_script.py`.

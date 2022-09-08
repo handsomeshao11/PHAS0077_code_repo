@@ -286,7 +286,7 @@ if __name__=="__main__":
 
     load_data =False# True：using the current data; False: generating new data
     if load_data == True:             
-        raw_s2,dp_s2,p_10,data_s2,label_s2,projs= pload("s_data.list")
+        raw_s2,dp_s2,p_10,data_s2,label_s2,projs= pload("data.list")
         n_simulation=200
         n_feature=72
         sim_type="s2"

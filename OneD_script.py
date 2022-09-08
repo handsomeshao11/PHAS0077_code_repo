@@ -296,7 +296,7 @@ if __name__ == '__main__':
 
     if load_data==True:
         data,ans,data_val, ans_val,oneD_dataset=pload("1D_data.list")
-        n_simulations,step_size,time_frame,n_features=pload("1D_sim_argument.list")
+        n_simulations,step_size,time_frame,n_features=pload("sim_argument.list")
     else:    
         #This sets the potentials, don't re-run
         total_n_pots = 25
