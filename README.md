@@ -1,7 +1,7 @@
 # PHAS0077_code_repo
 This is the PHAS0077 code repository of Shao Juexi.
 
-Please install the following packages first:
+Please create a new environment and install the following packages:
 mdtraj
 numpy
 scipy
@@ -12,35 +12,52 @@ scikit-learn
 matplotlib
 jupyter notebook / jupyterlab
 lime
+pytest
 
-To run the generated data, please download the data from [PHAS0077_support_data](https://www.dropbox.com/scl/fo/2or413mn5m7e7lqmoxipp/h?dl=0&rlkey=6fzfyihixvqq2po4zk0e2khnq).
+**Because the plot programs have fixed relative path both in 1D and 2D, after generating the new data both in 1D and 2D, you need to remove the past data and put the new data into the corresponding folder.**
+
+Because of the big memory of the data, to plot results with past data, you could download the data from [PHAS0077_support_data](https://www.dropbox.com/scl/fo/2or413mn5m7e7lqmoxipp/h?dl=0&rlkey=6fzfyihixvqq2po4zk0e2khnq). The each folder corresponds to the folder in github, and simply put each data into the correspond folder(LSTM and MLP used same data).
 
 # 1D
-## data generating and training
-Run 1D Machine learning program in the terminal with:
-
-`python .\1D_script.py`
 ## plot
-After you finished the training, you can create a new folder, and move the files generated and the 1D_plot.py script into the folder, and running by:
+You could use the current data to plot the results. Run with:
 
-`python .\1D_plot.py`
+`python .\OneD_plot.py`
 
-# 2D data generator
 ## data generating and training
-You can run 2D data machine learning program here:
-Run 2D Machine learning program in the terminal with:
+In the OneD_script file, you can choose to using the current data, and train the model. Make sure you put the data.list and sim_arguments.list in the  PHAS0077_code_repo folder. Or you could generate new 1D data and run 1D Machine learning program. The instruction of choice was commented in the code.
+Then you can run with
 
-`python .\2D_script.py`
+`python .\OneD_script.py`
+
+After you finished the training, you can move the files generated into the 1D_LSTM or 1D_MLP folder(if you use MLP, remember to change all the path to 1D_MLP), and run with:
+`python .\OneD_plot.py`
+
+# 2D
 ## plot
-After you finished the training, you can create a new folder, and move the files generated and the 2D_plot.py script into the folder, and running by:
+You could use the current data to plot the results and run with:
 
-`python .\2D_plot.py`
-## LIME 
-Furthermore:
-If you want to see the LIME results for 2D, you move the lime.py to the folder, and running by:
+`python .\TwoD_plot.py`
 
-`python .\lime.py`
+## LIME
+There are some lime instances in the 2D_LSTM folder, if you want to see the LIME results for 2D,  you can run with:
 
-And there are some lime instances in the 2D_LSTM folder, you can use pload function(see it in each python file) to see the result directly.
+`python .\lime_plot.py`
 
+Or you can change the lime_plot file to interpret a new instance, the instructions of changing was commented in the file. The Lime program is only for LSTM currently.
+## data generating and training
+In the TwoD_script file, you can choose to using the current data, and train the model. Make sure you put the 1D_data.list and sim_arguments.list in the  PHAS0077_code_repo folder. Or you could generate new 2D data and run 2D Machine learning program. The instruction of choice was commented in the code.
+Then you can run with
+
+`python .\TwoD_script.py`.
+
+After you finished the training, you can move the files generated into the 2D_LSTM and 2D_MLP (if you use MLP, remember to change all the path to 1D_MLP)folder, and run by:
+`python .\TwoD_plot.py`
+
+# Test
+The utils file contains the functions to throw Exceptions.
+The test file is used to check the abnormal input. You can run it with:
+
+`pytest .\test.py`
+#
 The files mentioned above was finished by Shao Juexi personally.
