@@ -3,16 +3,17 @@ This is the PHAS0077 code repository of Shao Juexi.
 
 Please create a new environment and install the following packages:
 mdtraj
-numpy
-scipy
-pandas
-seaborn
-tensorflow (2.6 and GPU perfered)
-scikit-learn
-matplotlib
-jupyter notebook / jupyterlab
-lime
-pytest
+, numpy
+, scipy
+, pandas
+, seaborn
+, tensorflow (2.6 and GPU perfered)
+, scikit-lear
+, matplotlib
+, jupyter notebook / jupyterlab
+, lime
+,pytest.
+Or you can use `pip install -r requirements.txt` to install all the packages.
 
 **Because the plot programs have fixed relative path both in 1D and 2D, after generating the new data both in 1D and 2D, you need to remove the past data and put the new data into the corresponding folder.**
 
@@ -51,7 +52,7 @@ Then you can run with
 
 `python .\TwoD_script.py`.
 
-After you finished the training, you can move the files generated into the 2D_LSTM and 2D_MLP (if you use MLP, remember to change all the path to 1D_MLP)folder, and run by:
+After you finished the training, you can move the files generated into the 2D_LSTM and 2D_MLP (if you use MLP, remember to change all the path to 2D_MLP)folder, and run by:
 `python .\TwoD_plot.py`
 
 # Test
